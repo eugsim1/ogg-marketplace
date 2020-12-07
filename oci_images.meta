@@ -1,0 +1,16 @@
+variable "marketplace_source_images" {
+  type = map(object({
+    ocid = string
+    is_pricing_associated = bool
+    compatible_shapes = set(string)
+  }))
+ 
+  default = {
+      image = {
+      // OCID of the published image
+      ocid = "ocid1.image.oc1..aaaaaaaa7h4njklnxbdg7e7v4zrmsuxtcjjyejutmcjptactlxbisgihxk5q"
+      is_pricing_associated = true
+      compatible_shapes = []
+    }
+  }
+}
